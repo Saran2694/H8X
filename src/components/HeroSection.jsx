@@ -21,9 +21,11 @@ export default function HeroSection({ onEnter }) {
         muted
         loop
         playsInline
+        preload="auto"
         className="absolute inset-0 w-full h-full object-cover z-0 filter brightness-90 contrast-110"
-        src="/img/vidhero.mp4"
-      />
+      >
+        <source src="/img/vidhero.mp4" type="video/mp4" />
+      </video>
 
       {/* SUBTLE CINEMATIC DARK OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10" />
