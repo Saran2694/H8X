@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   H8X — FUTURISTIC DARK CYBER GAMING DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+  /* Core Cyber Color Palette */
+  --h8x-bg-primary: #05070c;
+  --h8x-bg-card: rgba(13, 16, 24, 0.85);
+  --h8x-red-glow: #ff1e38;
+  --h8x-red-dark: #b30018;
+  --h8x-red-light: #ff4d63;
+  --h8x-text-main: #ffffff;
+  --h8x-text-muted: #8e95a5;
+
+  /* Fonts */
+  --font-editorial: 'Outfit', 'Rajdhani', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'Rajdhani', monospace;
+
+  /* Glassmorphism Specs */
+  --glass-bg: rgba(12, 14, 20, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-red-border: rgba(255, 30, 56, 0.35);
+  --glass-blur: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #05060a;
+  color: #ffffff;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+/* Cyber Dark Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #090b10;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff1e38;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff4d63;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Cyber Box Glow Effects */
+.cyber-panel {
+  background: linear-gradient(135deg, rgba(16, 20, 30, 0.85) 0%, rgba(8, 10, 16, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+.cyber-panel-red {
+  background: linear-gradient(135deg, rgba(25, 12, 18, 0.9) 0%, rgba(10, 8, 14, 0.95) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 30, 56, 0.3);
+  box-shadow: 0 0 25px rgba(255, 30, 56, 0.15);
+}
+
+.cyber-panel-red:hover {
+  border-color: rgba(255, 30, 56, 0.6);
+  box-shadow: 0 0 35px rgba(255, 30, 56, 0.3);
+}
+
+/* Custom Play Hexagon / Shield Trapezoid */
+.play-shield-btn {
+  background: linear-gradient(180deg, #ff2a43 0%, #b80018 100%);
+  clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+  box-shadow: 0 0 30px rgba(255, 30, 56, 0.6);
+  transition: all 0.3s ease;
+}
+.play-shield-btn:hover {
+  background: linear-gradient(180deg, #ff435a 0%, #d6001c 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 0 45px rgba(255, 30, 56, 0.8);
+}
+
+/* Cyber Button Red Glowing */
+.cyber-btn-red {
+  background: linear-gradient(90deg, #e60021 0%, #b30018 100%);
+  color: #ffffff;
+  font-family: var(--font-editorial);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(230, 0, 33, 0.4);
+  transition: all 0.3s ease;
+}
+.cyber-btn-red:hover {
+  background: linear-gradient(90deg, #ff1a38 0%, #d6001c 100%);
+  box-shadow: 0 6px 30px rgba(255, 30, 56, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Glass Dark Outline Button */
+.cyber-btn-outline {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  font-family: var(--font-editorial);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+.cyber-btn-outline:hover {
+  border-color: #ff1e38;
+  background: rgba(255, 30, 56, 0.1);
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 30, 56, 0.25);
+}
+
+/* Glowing text effects */
+.text-red-glow {
+  color: #ff1e38;
+  text-shadow: 0 0 15px rgba(255, 30, 56, 0.6);
+}
+
+/* Corner Cut Border Style */
+.corner-cut-box {
+  clip-path: polygon(
+    0 12px, 
+    12px 0, 
+    calc(100% - 12px) 0, 
+    100% 12px, 
+    100% calc(100% - 12px), 
+    calc(100% - 12px) 100%, 
+    12px 100%, 
+    0 calc(100% - 12px)
+  );
+}
+
+/* Red Neon Lines */
+.cyber-line-red {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,30,56,0) 0%, rgba(255,30,56,0.8) 50%, rgba(255,30,56,0) 100%);
+}
+
+.vertical-text-left {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  user-select: none;
+}
